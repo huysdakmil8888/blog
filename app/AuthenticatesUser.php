@@ -51,4 +51,5 @@ class AuthenticatesUser
        return view('welcome');
 
     }
+
 }

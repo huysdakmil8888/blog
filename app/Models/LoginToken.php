@@ -20,6 +20,7 @@ class LoginToken extends Model
             'user_id'=>$user->id,
             'token'=>Str::random(50)
         ]);
+
     }
 
     public function send()

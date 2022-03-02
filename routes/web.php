@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('create');
 });
 
-Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/login',[AuthController::class,'login']);
-Route::post('/login',[AuthController::class,'postLogin']);
-Route::get('/auth/token/{token}','App\Http\Controllers\AuthController@token');
+Route::post('skill',[PostController::class,'index']);
